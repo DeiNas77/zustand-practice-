@@ -11,16 +11,21 @@ interface countState {
 	title: string;
 	posts: POST[];
 	increaseCount: (value: number) => void;
+	decreaseCount: (value: number) => void;
 	getPost: (url: string) => Promise<void>;
 	multiply: (value: number) => void;
+	increaseByAmount: (value: number) => void;
+	reset: () => void;
 }
 
 export const useCounterStore = create<countState>((set, get) => ({
-	count: 10,
+	count: 0,
 	title: "Initial value Counter Zustand",
 	posts: [],
 	increaseCount: (value: number) =>
 		set((state) => ({ count: state.count + value })),
+	decreaseCount: (value: number) =>
+		set((state) => ({ count: state.count - value })),
 	getPost: async (url) => {
 		const response = await fetch(url);
 		const data = await response.json();
@@ -37,4 +42,7 @@ export const useCounterStore = create<countState>((set, get) => ({
 		const { count } = get();
 		set({ count: count * value });
 	},
+	increaseByAmount: (value: number) =>
+		set((state) => ({ count: state.count + value })),
+	reset: () => set({ count: 0 }),
 }));
