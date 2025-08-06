@@ -1,7 +1,7 @@
-import { HeroSection } from "./components/HeroSection";
+import { HomePage } from "./Template/HomePage";
 
 function App() {
-	return <HeroSection />;
+	return <HomePage />;
 }
 
 export default App;
