@@ -1,0 +1,37 @@
+[
+	{
+		"id": 1,
+		"question": "¿Cuál es el resultado de la siguiente expresión?",
+		"code": "console.log(typeof null);",
+		"answer": ["object", "null", "undefined", "number"],
+		"correctAnswer": 0
+	},
+	{
+		"id": 2,
+		"question": "¿Qué imprimirá este código?",
+		"code": "let a = [1, 2, 3];\nlet b = a;\nb.push(4);\nconsole.log(a);",
+		"answer": ["[1, 2, 3]", "[1, 2, 3, 4]", "[4, 1, 2, 3]", "undefined"],
+		"correctAnswer": 1
+	},
+	{
+		"id": 3,
+		"question": "¿Qué devuelve la siguiente función?",
+		"code": "function test() {\n  return typeof arguments;\n}",
+		"answer": ["array", "object", "undefined", "arguments"],
+		"correctAnswer": 1
+	},
+	{
+		"id": 4,
+		"question": "¿Cuál es el resultado?",
+		"code": "let x = 0;\nif (x) {\n  console.log(\"true\");\n} else {\n  console.log(\"false\");\n}",
+		"answer": ["true", "false", "undefined", "0"],
+		"correctAnswer": 1
+	},
+	{
+		"id": 5,
+		"question": "¿Cual es el resultado del siguiente código?",
+		"code": "3 + 5 + '7'",
+		"answer": ["87", "37", "57", "undefined"],
+		"correctAnswer": 0
+	}
+]
